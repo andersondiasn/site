@@ -8166,7 +8166,7 @@ h1, h2, h3, h4, h5,
   color: #497BBD !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background: white !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -8388,6 +8388,22 @@ h1, h2, h3, h4, h5,
   .navbar-brand span {
     color: #fff; }
 
+@mixin responsive-bg-image($image-width, $image-height) {
+  background-size: 100%;
+  height: 0;
+  padding-bottom: percentage($image-height / $image-width);
+  display: block;
+}
+
+
+.my-element {
+  background: url("images/geral.png") no-repeat;
+
+
+  @include responsive-bg-image(1400, 739);
+}
+
+
 .hero-wrap {
   width: 100%;
   height: 100%;
@@ -8395,8 +8411,7 @@ h1, h2, h3, h4, h5,
   background-size: cover;
   background-repeat: no-repeat; }
   .hero-wrap .overlay {
-    position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -8424,7 +8439,7 @@ h1, h2, h3, h4, h5,
 .slider-text h2 {
   font-weight: 800; }
   .slider-text h2 span {
-    color: #497BBD;
+    color: #FF8C00;
     text-decoration: underline; }
 
 .slider-text p {
